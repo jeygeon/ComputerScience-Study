@@ -1,5 +1,5 @@
 # Computer Science Study Load Map
-### 📌 네트워크
+### 📌 네트워크(Network)
 1. OSI 7계층
 2. IP(IPv4, IPv6)
 3. TCP / UDP
@@ -10,7 +10,7 @@
 8. Blocking & Non-Blocking I/O
 9. DNS
 --- 
-### 📌 운영체제
+### 📌 운영체제(Operating System)
 1. 운영체제란?
 2. Process와 Thread
 3. Multi Thread
@@ -27,7 +27,7 @@
 14. 파일 시스템
 15. 캐시의 지역성
 ---
-### 📌 데이터베이스
+### 📌 데이터베이스(Database)
 1. SQL
 2. SQL Injection
 3. SQL vs NoSQL
@@ -43,7 +43,7 @@
 13. 리플리케이션(Replication)
 14. ORM
 ---
-### 📌 자료구조
+### 📌 자료구조(Data Structure)
 1. Array vs Linked List
 2. Stack and Queue
 3. Tree
@@ -52,7 +52,7 @@
 6. Hash Table
 7. Graph
 ---
-### 📌 알고리즘
+### 📌 알고리즘(Algorithm)
 1. 거품 정렬(Bubble Sort)
 2. 선택 정렬(Selection Sort)
 3. 삽입 정렬(Insertion Sort)
