@@ -66,7 +66,6 @@ ex) 통신케이블, 허브 등...
 <br/>
 <br/>
 
----
 ## _References_
 - https://jungeun960.tistory.com/181
 - https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-OSI-7%EA%B3%84%EC%B8%B5-%EC%A0%95%EB%A6%AC
