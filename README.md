@@ -1,5 +1,5 @@
 # Computer Science Study Load Map
-### 📌 네트워크(Network)
+### 📌 [네트워크(Network)](https://github.com/jaeygun/ComputerScience-Study/tree/master/Network)
 1. OSI 7계층
 2. IP(IPv4, IPv6)
 3. TCP / UDP
