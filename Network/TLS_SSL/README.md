@@ -14,7 +14,17 @@
 
 **SSL(Secure Socket Layer)** 이란 암호화 기반 인터넷 보안 프로토콜이다. 전달되는 모든 데이터는 암호화되며, 특정 유형의 사이버 공격도 차단한다.
 
+우리가 사용하는 HTTP 프로토콜에 SSL인증서를 적용하게 되면 HTTPS 프로토콜을 사용하게 되는데, HTTPS는 보안에 더 강한 프로토콜이라고 할 수 있다.
+
+![http_https](./image/http_https.png)      
+*이미지 출처 : https://www.cloudflare.com/ko-kr/learning/ssl/what-is-ssl/*
+
 하지만 SSL은 1996년 SSL 3.0이후 업데이트 되지 않으며, 여러가지 취약점이 알려져 있어서 사용 중단을 권고 하고있다. 그 대안으로 나온 것이 TLS이다.
+
+<br/>
+<br/>
+
+## 2. TLS란?
 
 
 
@@ -24,3 +34,4 @@
 
 ## _References_
 - https://kanoos-stu.tistory.com/46
+- https://www.cloudflare.com/ko-kr/learning/ssl/what-is-ssl/
