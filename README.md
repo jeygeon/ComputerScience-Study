@@ -5,10 +5,9 @@
 3. TCP / UDP
 4. TLS/SSL handshake
 5. 대칭키 & 공개키
-6. HTTP & HTTPS
-7. 로드밸런싱(Load Balancing)
-8. Blocking & Non-Blocking I/O
-9. DNS
+6. 로드밸런싱(Load Balancing)
+7. Blocking & Non-Blocking I/O
+8. DNS
 --- 
 ### 📌 운영체제(Operating System)
 1. 운영체제란?
