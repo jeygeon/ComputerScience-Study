@@ -14,13 +14,35 @@
 ## 2. LinkedList
 연결리스트란 각 노드가 데이터와 포인터를 가지고 메모리 상에 분산되어 존재하며 존재하게 된다. 각 노드에 포함된 포인터는 다음 노드를 연결하게 된다.
 
-그림으로는 아래와 같이 표현할 수 있다.
 
 ![LinkedList](./image/array%20vs%20LinkedList.png)
 
 연결리스트는 **단일 연결 리스트**, **이중 연결 리스트**, **원형 연결 리스트** 이렇게 3가지 종류로 구분 할 수 있다.
 
+#### 1. 단일 연결 리스트 <br/>
+단일 연결 리스트는 각 노드에 데이터가 저장되어있는 자료 공간과 포인터 공간이 존재하고, 각 포인터는 다음 노드를 가리키는 구조이다.
 
+![Single_liked_list](./image/Single_linked_list.png)
+*이미지 출처 : https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8*
+
+#### 2. 이중 연결 리스트
+인중 연결 리스트는 단일 연결 리스트와 마찬가지로 자료 공간과 포인터 공간이 존재하지만 포인터 공간이 총 2개가 존재하며, 각 포인터 공간은 이전 노드, 다음 노드를 가리킨다.
+
+![Doubly_liked_list](./image/Doubly_linked_list.png)
+*이미지 출처 : https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8*
+
+#### 3. 원형 연결 리스트
+원형 연결 리스트는 단일 연결 리스트에서 제일 마지막 노드가 처음 노드를 연결시켜 원형으로 이루어진 구조이다.
+
+![Circurlar_linked_list](./image/Circurlar_linked_list.png)
+*이미지 출처 : https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8*
+ 
+
+연결리스트는 메모리상에 빈 공간에 데이터를 생성 한뒤 노드로 연결만 하면 되기 때문에 최초 생성 시 크기가 고정되지 않는다. 그래서 데이터의 삭제와 삽입이 배열보다는 효율적이다.
+
+하지만 데이터 조회를 할 때 데이터들이 메모리상에 모두 떨어져 있기 때문에 최초 노드를 찾고.. 그 다음.. 그 다음 노드를 찾아가기 때문에 시간 복잡도는 O(n)의 형태를 띄게 된다.
+
+하지만 삽입/삭제를 할 때에는 주변 노드들의 link만 수정하면 되기 때문에 특정 값에 비례하지 않고 항상 일정하다. 시간 복잡도는 O(1)의 형태이다.
 
 <br/>
 <br/>
@@ -28,5 +50,4 @@
 
 ## _References_
 - https://inpa.tistory.com/entry/JCF-%F0%9F%A7%B1-ArrayList-vs-LinkedList-%ED%8A%B9%EC%A7%95-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90
-- https://myung-ho.tistory.com/m/113
 - https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8
