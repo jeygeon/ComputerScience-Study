@@ -2,9 +2,9 @@ package linkedList;
 
 public class Node<E> {
 
-	private E data;
+	private E data = null;
 
-	private Node<E> nextPointer;
+	private Node<E> nextPointer = null;
 
 	public void setData(E data) {
 
@@ -29,5 +29,8 @@ public class Node<E> {
 	public Node(E data, Node<E> nextPointer) {
 		this.data = data;
 		this.nextPointer = nextPointer;
+	}
+
+	public Node() {
 	}
 }
