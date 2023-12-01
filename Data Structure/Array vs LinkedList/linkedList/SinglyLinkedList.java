@@ -23,12 +23,12 @@ public class SinglyLinkedList<E> {
 	public Node<E> search(int index) {
 
 		// 시작은 처음 노드를 가져와서 순서대로 조회한다.
-		Node<E> n = head;
+		Node<E> node = head;
 		for (int i=0; i<index; i++) {
-			n = n.getNextPointer();
+			node = node.getNextPointer();
 		}
 
-		return n;
+		return node;
 	}
 
 	/**
@@ -81,6 +81,47 @@ public class SinglyLinkedList<E> {
 	}
 
 	/**
+	 * 노드 제거
+	 * 
+	 * @param data 삭제할 데이터
+	 */
+	public void removeNode(E data) {
+
+		boolean result = false;
+
+		Node<E> preNode = this.head;
+		Node<E> targetNode = this.head;
+		while(!result) {
+			// 삭제할 데이터가 있는 노드를 찾는다
+			if (data.equals(targetNode.getData())) {
+
+				// 삭제할 노드(targetNode)의 다음 노드를 저장
+				Node<E> nextNode = targetNode.getNextPointer();
+
+				// targetNode 삭제
+				targetNode = null;
+
+				// 만약 targetNode가 headNode라면 headNode제거 후 nextNode를 headNode로 설정
+				if (preNode == this.head) {
+					preNode = null;
+					this.head = nextNode;
+					this.size--;
+					return;
+				}
+
+				// preNode의 nextPointer 수정 
+				preNode.setNextPointer(nextNode);
+				this.size--;
+				result = true;
+			} else {
+				preNode = targetNode;
+				targetNode = targetNode.getNextPointer();
+			}
+		}
+		return;
+	}
+
+	/**
 	 * 리스트의 사이즈
 	 * 
 	 * @return
@@ -89,7 +130,7 @@ public class SinglyLinkedList<E> {
 
 		return this.size;
 	}
-	
+
 	/**
 	 * 리스트 값
 	 * 

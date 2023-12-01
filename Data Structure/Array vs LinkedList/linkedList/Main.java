@@ -15,18 +15,21 @@ public class Main {
 		System.out.println("singlyLinkedList value : " + singlyLinkedList.listValue()); // 1 > 2 > 3 > 4 > 5
 		System.out.println("singlyLinkedList size : " + singlyLinkedList.size()); // 5
 
-		System.out.println("\n");
-
 		System.out.println("==================== 단일 연결 리스트 노드 조회 ====================");
 		System.out.println("singlyLinkedList search index 2 : " + singlyLinkedList.search(2).getData()); // 3
 		System.out.println("singlyLinkedList search index 4 : " + singlyLinkedList.search(4).getData()); // 5
 
-		System.out.println("\n");
-
 		System.out.println("==================== 단일 연결 리스트 노드 추가 ====================");
-		singlyLinkedList.addNode((E)"6", 3);
+		singlyLinkedList.addNode((E)"6", 0);
 		singlyLinkedList.addNode((E)"7", 4);
-		System.out.println("singlyLinkedList value : " + singlyLinkedList.listValue()); // 1 > 2 > 3 > 6 > 7 > 4 > 5
+		System.out.println("singlyLinkedList value : " + singlyLinkedList.listValue()); // 6 > 1 > 2 > 3 > 7 > 4 > 5
 		System.out.println("singlyLinkedList size : " + singlyLinkedList.size()); // 7
+		
+		System.out.println("==================== 단일 연결 리스트 노드 삭제 ====================");
+		singlyLinkedList.removeNode((E) "1");
+		singlyLinkedList.removeNode((E) "3");
+		System.out.println("singlyLinkedList value : " + singlyLinkedList.listValue()); // 6 > 7 > 4 > 5
+		System.out.println("singlyLinkedList size : " + singlyLinkedList.size()); // 5
+		
 	}
 }
