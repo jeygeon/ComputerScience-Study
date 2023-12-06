@@ -220,7 +220,6 @@ public class DoublyLinkedList<E> {
 					 */
 					nextNode.setPrePointer(preNode);
 					nextNode.getPrePointer().setNextPointer(nextNode);
-					preNode.setNextPointer(nextNode);
 					this.size--;
 					result = true;
 				}
