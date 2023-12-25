@@ -1,5 +1,5 @@
 # Tree
-## 1. 트리(Tree)란?
+# 1. 트리(Tree)란?
 - 트리는 그래프의 일종으로 정점과 간선을 이용하여 데이터의 배치 형태를 추상화한 자료구조이다.
 - 서로 다른 두 노드를 연결하는 길이 하나뿐이 그래프를 트리라고 한다.
 - 힙(Heap)을 구성하는 방법 중 하나가 트리이다.
@@ -7,7 +7,7 @@
 <br/>
 <br/>
 
-## 2. 특징
+# 2. 특징
 - 트리는 일반적으로 대상 정보의 각 항목들을 계층적으로 구조화할 때 사용하는 비선형 자료구조이다.
 - 트리는 '데이터의 저장' 보다는 '저장된 데이터를 더 효과적으로 탐색'하기 위해서 주로 사용된다.
 - 리스트와 다르게 데이터가 단순히 나열되는 구조가 아닌, 부모와 자식의 계층적인 관계로 표현된다.
@@ -17,7 +17,7 @@
 <br/>
 <br/>
 
-## 3. 용어
+# 3. 용어
 ![Tree](../Tree/image/Tree.webp)
 *이미지 출처 : https://namu.wiki/w/%ED%8A%B8%EB%A6%AC(%EA%B7%B8%EB%9E%98%ED%94%84)
 
@@ -38,29 +38,29 @@
 <br/>
 <br/>
 
-## 3. 트리 종류
-1. Binary Tree
-- 자식 노드가 최대 2개까지만 붙는 트리
+# 3. 트리 종류
+## 1) Binary Tree
+- 자식 노드가 최대 2개까지만 붙는 트리<br/>
 ![BinaryTree](../Tree/image/BinaryTree.png)<br/>
 *이미지 출처 : https://propercoding.tistory.com/214
-2. Binary Search Tree
+## 2) Binary Search Tree
 - Binary Tree의 왼쪽 노드와 그 이하 노드는 현재 노드보다 작아야하고, 오른쪽 노드와 그 이하 노드는 현재 노드보다 값이 큰 트리<br/>
 (현재 노드보다 큰 값을 찾고 싶으면 오른쪽, 작은 값을 찾고싶으면 왼쪽으로!)
 ![BinaryTree](../Tree/image/BinarySearchTree.png)<br/>
 *이미지 출처 : https://propercoding.tistory.com/214
-3. Complete Binary Tree
+## 3) Complete Binary Tree
 - 모든 서브트리의 레벨이 같고, 모든 노드들이 레벨별로 왼쪽부터 채워져 있는 경우
 ![BinaryTree](../Tree/image/CompleteBinaryTree.png)<br/>
 *이미지 출처 : https://propercoding.tistory.com/214
-4. Full Binary Tree
+## 4) Full Binary Tree
 - 모든 노드가 자식 노드를 0개 또는 2개를 같는 트리
 ![BinaryTree](../Tree/image/FullBinaryTree.png)<br/>
 *이미지 출처 : https://propercoding.tistory.com/214
-5. Perfect Binary Tree
+## 5) Perfect Binary Tree
 - 마지막 레벨을 제외한 모든 레벨에서 모든 노드가 0개 또는 2개의 노드를 갖는 트리
 ![BinaryTree](../Tree/image/PerfectBinaryTree.png)<br/>
 *이미지 출처 : https://propercoding.tistory.com/214
-6. Balanced Binary Tree
+## 6) Balanced Binary Tree
 - 왼쪽과 오른쪽의 트리의 레벨차이가 1만큼만 나는 트리구조
 ![BinaryTree](../Tree/image/BalancedBinaryTree.png)<br/>
 *이미지 출처 : https://propercoding.tistory.com/214
@@ -68,12 +68,12 @@
 <br/>
 <br/>
 
-## 4. Binary Tree의 3가지 순회 방법
+# 4. Binary Tree의 3가지 순회 방법
 
 <br/>
 <br/>
 
-## 5. 활용 사례
+# 5. 활용 사례
 
 
 
