@@ -12,6 +12,7 @@
 - 트리는 '데이터의 저장' 보다는 '저장된 데이터를 더 효과적으로 탐색'하기 위해서 주로 사용된다.
 - 리스트와 다르게 데이터가 단순히 나열되는 구조가 아닌, 부모와 자식의 계층적인 관계로 표현된다.
 - 트리는 루트노드를 제외한 모든 노드에서는 단 하나의 부모노드를 가진다.
+- 트리는 사이클이 존재하지 않는다. 사이클이란 시작노드에서 출발해 다른 노드를 거쳐 다시 시작 노드로 돌아올 수 있는걸 뜻한다.
 
 <br/>
 <br/>
@@ -38,12 +39,41 @@
 <br/>
 
 ## 3. 트리 종류
-
+1. Binary Tree
+- 자식 노드가 최대 2개까지만 붙는 트리
+![BinaryTree](../Tree/image/BinaryTree.png)<br/>
+*이미지 출처 : https://propercoding.tistory.com/214
+2. Binary Search Tree
+- Binary Tree의 왼쪽 노드와 그 이하 노드는 현재 노드보다 작아야하고, 오른쪽 노드와 그 이하 노드는 현재 노드보다 값이 큰 트리<br/>
+(현재 노드보다 큰 값을 찾고 싶으면 오른쪽, 작은 값을 찾고싶으면 왼쪽으로!)
+![BinaryTree](../Tree/image/BinarySearchTree.png)<br/>
+*이미지 출처 : https://propercoding.tistory.com/214
+3. Complete Binary Tree
+- 모든 서브트리의 레벨이 같고, 모든 노드들이 레벨별로 왼쪽부터 채워져 있는 경우
+![BinaryTree](../Tree/image/CompleteBinaryTree.png)<br/>
+*이미지 출처 : https://propercoding.tistory.com/214
+4. Full Binary Tree
+- 모든 노드가 자식 노드를 0개 또는 2개를 같는 트리
+![BinaryTree](../Tree/image/FullBinaryTree.png)<br/>
+*이미지 출처 : https://propercoding.tistory.com/214
+5. Perfect Binary Tree
+- 마지막 레벨을 제외한 모든 레벨에서 모든 노드가 0개 또는 2개의 노드를 갖는 트리
+![BinaryTree](../Tree/image/PerfectBinaryTree.png)<br/>
+*이미지 출처 : https://propercoding.tistory.com/214
+6. Balanced Binary Tree
+- 왼쪽과 오른쪽의 트리의 레벨차이가 1만큼만 나는 트리구조
+![BinaryTree](../Tree/image/BalancedBinaryTree.png)<br/>
+*이미지 출처 : https://propercoding.tistory.com/214
 
 <br/>
 <br/>
 
-## 4. 활용 사례
+## 4. Binary Tree의 3가지 순회 방법
+
+<br/>
+<br/>
+
+## 5. 활용 사례
 
 
 
