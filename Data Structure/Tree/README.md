@@ -69,17 +69,35 @@
 <br/>
 
 # 4. Binary Tree의 3가지 순회 방법
+## 1) 전위 순회(PreOrder)
+- ROOT $\Rightarrow$ L $\Rightarrow$ R 순서로 순회
+
+![preorder](../Tree/image/preorder.png)<br/>
+*이미지 출처 : https://velog.io/@yeonkr/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%8A%B8%EB%A6%AC-%EC%88%9C%ED%9A%8CTree-Traversal*<br/>
+
+    전위 순회 결과 : A B D E C F G
+
+
+## 2) 중위 순회
+- L $\Rightarrow$ ROOT $\Rightarrow$ R 순서로 순회
+
+![inorder](../Tree/image/inorder.png)<br/>
+*이미지 출처 : https://velog.io/@yeonkr/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%8A%B8%EB%A6%AC-%EC%88%9C%ED%9A%8CTree-Traversal*<br/>
+
+    중위 순회 결과 : D B E A F C G
+
+## 3) 후위 순회
+- L $\Rightarrow$ R $\Rightarrow$ ROOT 순서로 순회
+
+![postorder](../Tree/image/postorder.png)<br/>
+*이미지 출처 : https://velog.io/@yeonkr/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%8A%B8%EB%A6%AC-%EC%88%9C%ED%9A%8CTree-Traversal*<br/>
+
+    후위 순회 결과 : D E B F G C A
 
 <br/>
 <br/>
-
-# 5. 활용 사례
-
-
-
-
-<br/>
-<br/>
 <br/>
 
-## _References_
+## _References
+- https://velog.io/@yeonkr/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%8A%B8%EB%A6%AC-%EC%88%9C%ED%9A%8CTree-Traversal
+- https://propercoding.tistory.com/214
