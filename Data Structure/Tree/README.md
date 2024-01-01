@@ -78,7 +78,7 @@
     전위 순회 결과 : A B D E C F G
 
 
-## 2) 중위 순회
+## 2) 중위 순회(InOrder)
 - L $\Rightarrow$ ROOT $\Rightarrow$ R 순서로 순회
 
 ![inorder](../Tree/image/inorder.png)<br/>
@@ -86,7 +86,7 @@
 
     중위 순회 결과 : D B E A F C G
 
-## 3) 후위 순회
+## 3) 후위 순회(PostOrder)
 - L $\Rightarrow$ R $\Rightarrow$ ROOT 순서로 순회
 
 ![postorder](../Tree/image/postorder.png)<br/>

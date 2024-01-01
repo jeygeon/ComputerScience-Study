@@ -2,10 +2,13 @@ package tree;
 
 public class Node<E> {
 
+    // 데이터
     private E data;
 
+    // 왼쪽 자식 노드
     private Node<E> leftChildNode;
 
+    // 오른쪽 자식 노드
     private Node<E> rightChildNode;
 
     public void setLeftChildNode(Node<E> node) {

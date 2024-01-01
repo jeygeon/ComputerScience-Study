@@ -21,15 +21,42 @@ public class Tree<E> {
         return node;
     }
 
-    public void preOrder() {
+    /**
+     * 전위 순회<br/>
+     * ROOT > LEFT > RIGHT 순서로 순회
+     */
+    public void preOrder(Node<E> node) {
 
+        if (node != null) {
+            System.out.println(node.getData());
+            preOrder(node.getLeftChildNode());
+            preOrder(node.getRightChildNode());
+        }
     }
 
-    public void inOrder() {
+    /**
+     * 중위 순회<br/>
+     * LEFT > ROOT > RIGHT 순서로 순회
+     */
+    public void inOrder(Node<E> node) {
 
+        if (node != null) {
+            inOrder(node.getLeftChildNode());
+            System.out.println(node.getData());
+            inOrder(node.getRightChildNode());
+        }
     }
 
-    public void postOrder() {
+    /**
+     * 후위 순회 <br/>
+     * LEFT > RIGHT > ROOT 순서로 순회
+     */
+    public void postOrder(Node<E> node) {
 
+        if (node != null) {
+            postOrder(node.getLeftChildNode());
+            postOrder(node.getRightChildNode());
+            System.out.println(node.getData());
+        }
     }
 }

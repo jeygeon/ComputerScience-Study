@@ -21,12 +21,12 @@ public class Main {
         Node<E> node1 = tree.makeNode(node2, (E) "1", node3);
 
         // preOrder
-        tree.preOrder();
+        tree.preOrder(node1); // 1 > 2 > 4 > 5 > 3 > 6
 
         // inOrder
-        tree.inOrder();
+        tree.inOrder(node1); // 4 > 2 > 5 > 1 > 3 > 6
 
         // postOrder
-        tree.postOrder();
+        tree.postOrder(node1); // 4 > 5 > 2 > 6 > 3 > 1
     }
 }
