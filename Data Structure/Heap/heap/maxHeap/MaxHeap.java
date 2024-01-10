@@ -1,7 +1,5 @@
 package Heap;
 
-import com.sun.org.apache.xpath.internal.operations.String;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,9 +34,8 @@ public class MaxHeap {
         if (parentData != 0 && data > parentData) {
             sb.append(" > 부모 노드 보다 큰 데이터가 추가 되었습니다. Heap을 재정렬합니다.");
             System.out.println(sb.toString());
-
+ 
             int childData;
-            int parentData;
             // 루트 노드까지 계속 돌리면서 자식 노드의 데이터가 부모 노드보다 크다면 부모노드와 자식노드 교환
             while(index > 1 && this.heap.get(index) > this.heap.get(index / 2)) {
                 childData = this.heap.get(index);
@@ -55,24 +52,64 @@ public class MaxHeap {
 
     public void remove() {
 
-        // 삭제 할 데이터 저장
-        int removeData = this.heap.get(1);
-
         // 가장 마지막에 추가된 노드를 루트 노드로 지정
         int lastNodeIndex = this.heap.size() - 1;
         this.heap.set(1, this.heap.get(lastNodeIndex));
 
         // 가장 마지막에 추가된 노드 자리 데이터 삭제
         this.heap.remove(lastNodeIndex);
+        System.out.println("Heap 최대값 노드 삭제 완료 : " + this.heap.toString());
 
-        /*
-        루트 노드 데이터 삭제 후 가장 마지막 노드 데이터를 루트 노드에 넣고 Max Heap에 맞도록 재 정렬
-        루트 노드 데이터 삭제 후 바로 그 밑 자식 노드 크기 비교해서 부모 노드로 올려보내지 않고 이렇게 하는 이유는
-        Complete Binary Tree의 구조를 지키기 위함
-         */
-        while () {
+        // 현재 index노드(root부터 시작)가 오른쪽 자식노드 또는 왼쪽 자식노드보다 크면 종료한다.
+        int index = 1;
+        int targetData;
+        int leftChildData;
+        int rightChildData;
+        int biggerChildData;
+        boolean isLeftChildBigger = true;
+        int test1 = this.heap.get(index);
+        int test2 = this.heap.get(index * 2);
+        int test3 = this.heap.get(index * 2 + 1);
+        while (this.heap.get(index) < this.heap.get(index * 2) || this.heap.get(index) < this.heap.get(index * 2 + 1)) {
+            targetData = this.heap.get(index);
+            leftChildData = this.heap.get(index * 2);
+            rightChildData = this.heap.get(index * 2 + 1);
 
+            // leftChildData와 rightChildData를 비교하여 더 큰 childData와 targetData를 비교
+            if (leftChildData > rightChildData) {
+                biggerChildData = leftChildData;
+                isLeftChildBigger = true;
+            } else {
+                biggerChildData = rightChildData;
+                isLeftChildBigger = false;
+            }
+
+            // targetData가 자식 노드보다 더 크면 while문 종료
+            if (targetData > biggerChildData) {
+            	System.out.println("Heap 정렬 완료 : " + this.heap.toString());
+                break;
+            }
+
+            // targetData의 leftChildData가 더 큰 경우 targetData와 leftChildData 교환 > index는 leftChildData자리의 index로 설정
+            if (targetData < biggerChildData && isLeftChildBigger) {
+                this.heap.set(index, leftChildData);
+                this.heap.set(index * 2, targetData);
+                index = index * 2;
+                System.out.println("Heap 정렬 완료 : " + this.heap.toString());
+            }
+
+            // targetData의 rightChildData가 더 큰 경우 targetData와 rightChildData 교환 > index는 rightChildData자리의 index로 설정
+            if (targetData < biggerChildData && !isLeftChildBigger) {
+                this.heap.set(index, rightChildData);
+                this.heap.set(index * 2 + 1, targetData);
+                index = index * 2 + 1;
+                System.out.println("Heap 정렬 완료 : " + this.heap.toString());
+                
+                // 다음 비교 할 대상이 왼쪽 자식밖에 없는 경우
+                if (index == this.heap.size()) {
+                    
+                }
+            }
         }
-
     }
 }
