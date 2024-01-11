@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         MaxHeap heap = new MaxHeap();
+        System.out.println("==================== 데이터 추가 시작 ====================");
         heap.add(18);
         heap.add(15);
         heap.add(11);
@@ -12,6 +13,7 @@ public class Main {
         heap.add(7);
         heap.add(3);
         heap.add(20);
+        System.out.println("==================== 데이터 추가 종료 ====================");
         /*
         - Max Heap Add 결과
         - 제일 앞 0은 계산을 편하게 하기 위해 넣은 더미데이터이다. 무시 할 것
@@ -28,5 +30,9 @@ public class Main {
         Heap 정렬 완료 : [0, 20, 15, 18, 8, 7, 3, 11]
          */
 
+        System.out.println("==================== 데이터 삭제 시작 ====================");
+        heap.remove();
+        heap.remove();
+        System.out.println("==================== 데이터 삭제 종료 ====================");
     }
 }

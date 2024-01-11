@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MaxHeap {
+
     private List<Integer> heap;
 
     public MaxHeap() {
@@ -67,32 +68,43 @@ public class MaxHeap {
         int rightChildData;
         int biggerChildData;
         boolean isLeftChildBigger = true;
-        int test1 = this.heap.get(index);
-        int test2 = this.heap.get(index * 2);
-        int test3 = this.heap.get(index * 2 + 1);
-        while (this.heap.get(index) < this.heap.get(index * 2) || this.heap.get(index) < this.heap.get(index * 2 + 1)) {
+        while (index < this.heap.size() - 1) {
             targetData = this.heap.get(index);
-            leftChildData = this.heap.get(index * 2);
-            rightChildData = this.heap.get(index * 2 + 1);
 
-            // leftChildData와 rightChildData를 비교하여 더 큰 childData와 targetData를 비교
-            if (leftChildData > rightChildData) {
+            /*
+             * 대소를 비교 할 왼쪽 자식 노드가 더 이상 존재하지 않으면 while문 종료
+             */
+            if (index * 2 > this.heap.size() - 1) {
+                break;
+            }
+            leftChildData = this.heap.get(index * 2);
+
+            /*
+             * 대소를 비교 할 오른쪽 자식 노드가 더 이상 존재하지 않으면 왼쪽 노드랑만 비교
+             */
+            if (index * 2 + 1 > this.heap.size() - 1) {
                 biggerChildData = leftChildData;
                 isLeftChildBigger = true;
             } else {
-                biggerChildData = rightChildData;
-                isLeftChildBigger = false;
+                rightChildData = this.heap.get(index * 2 + 1);
+                // leftChildData와 rightChildData를 비교하여 더 큰 childData와 targetData를 비교
+                if (leftChildData > rightChildData) {
+                    biggerChildData = leftChildData;
+                    isLeftChildBigger = true;
+                } else {
+                    biggerChildData = rightChildData;
+                    isLeftChildBigger = false;
+                }
             }
 
             // targetData가 자식 노드보다 더 크면 while문 종료
             if (targetData > biggerChildData) {
-            	System.out.println("Heap 정렬 완료 : " + this.heap.toString());
                 break;
             }
 
             // targetData의 leftChildData가 더 큰 경우 targetData와 leftChildData 교환 > index는 leftChildData자리의 index로 설정
             if (targetData < biggerChildData && isLeftChildBigger) {
-                this.heap.set(index, leftChildData);
+                this.heap.set(index, biggerChildData);
                 this.heap.set(index * 2, targetData);
                 index = index * 2;
                 System.out.println("Heap 정렬 완료 : " + this.heap.toString());
@@ -100,15 +112,10 @@ public class MaxHeap {
 
             // targetData의 rightChildData가 더 큰 경우 targetData와 rightChildData 교환 > index는 rightChildData자리의 index로 설정
             if (targetData < biggerChildData && !isLeftChildBigger) {
-                this.heap.set(index, rightChildData);
+                this.heap.set(index, biggerChildData);
                 this.heap.set(index * 2 + 1, targetData);
                 index = index * 2 + 1;
                 System.out.println("Heap 정렬 완료 : " + this.heap.toString());
-                
-                // 다음 비교 할 대상이 왼쪽 자식밖에 없는 경우
-                if (index == this.heap.size()) {
-                    
-                }
             }
         }
     }
