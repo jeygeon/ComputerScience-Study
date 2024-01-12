@@ -6,6 +6,11 @@ public class Student implements Comparable<Student>{
 
 	private String grade;
 
+	public String getName() {
+
+		return this.name;
+	}
+
 	public String getGrade() {
 
 		return this.grade;
@@ -25,6 +30,6 @@ public class Student implements Comparable<Student>{
 
 	public String toString() {
 
-		return "[ Name : " + this.name + " ] [ grade : " + this.grade + " ]";
+		return "[ Name : " + this.name + ", Grade : " + this.grade + " ]";
 	}
 }

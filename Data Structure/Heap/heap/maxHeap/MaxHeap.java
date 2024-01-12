@@ -103,7 +103,7 @@ public class MaxHeap {
             }
 
             // targetData의 leftChildData가 더 큰 경우 targetData와 leftChildData 교환 > index는 leftChildData자리의 index로 설정
-            if (targetData < biggerChildData && isLeftChildBigger) {
+            if (isLeftChildBigger) {
                 this.heap.set(index, biggerChildData);
                 this.heap.set(index * 2, targetData);
                 index = index * 2;
@@ -111,7 +111,7 @@ public class MaxHeap {
             }
 
             // targetData의 rightChildData가 더 큰 경우 targetData와 rightChildData 교환 > index는 rightChildData자리의 index로 설정
-            if (targetData < biggerChildData && !isLeftChildBigger) {
+            if (!isLeftChildBigger) {
                 this.heap.set(index, biggerChildData);
                 this.heap.set(index * 2 + 1, targetData);
                 index = index * 2 + 1;
