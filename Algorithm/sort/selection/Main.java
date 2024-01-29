@@ -10,7 +10,7 @@ public class Main {
 
 		SelectionSort.sort(arr);
 
-		System.out.println(Arrays.toString(arr)); // 결과 : [3, 5, 7, 9, 14, 19]
+		System.out.println(Arrays.toString(arr)); // 결과 : [2, 3, 8, 10, 15, 17]
 	}
 
 }
