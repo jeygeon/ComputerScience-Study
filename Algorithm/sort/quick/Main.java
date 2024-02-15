@@ -1,12 +1,16 @@
 package sort.quick;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        int[] arr = {7, 3, 8, 1, 5, 2, 9, 4, 6, 10};
         
-        int[] arr = {5, 3, 6, 10, 1, 7};
+        QuickSort.sort(arr, 0, arr.length - 1);
         
-        QuickSort.sort(arr, "left");
+        System.out.println(Arrays.toString(arr));
     }
 
 }
